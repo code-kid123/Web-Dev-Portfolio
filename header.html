@@ -29,40 +29,52 @@
     <link href="css/style.css" rel="stylesheet">
    
 <style>
+   
+
+   /* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    background-color: #25d366 !important;
+    color: white !important;
+    border-radius: 50px !important;
+    padding: 12px 25px !important;
+    z-index: 9999999 !important; /* Maximum priority */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    box-shadow: 2px 4px 15px rgba(0,0,0,0.4) !important;
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: 700 !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e !important;
+    transform: scale(1.1) !important;
+}
+
+.whatsapp-float i {
+    font-size: 24px !important;
+    margin-right: 10px !important;
+}
+
+/* Mobile: Show only icon to keep the UI clean */
+@media (max-width: 768px) {
+    .whatsapp-float span {
+        display: none !important;
+    }
     .whatsapp-float {
-        position: fixed !important;
-        bottom: 30px !important;
-        right: 30px !important;
-        background-color: #25d366 !important;
-        color: #fff !important;
-        border-radius: 50px !important;
-        text-align: center !important;
-        padding: 12px 25px !important;
-        box-shadow: 2px 5px 15px rgba(0,0,0,0.3) !important;
-        z-index: 2147483647 !important; /* This is the max possible z-index */
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-decoration: none !important;
-        font-family: Arial, sans-serif !important;
-        font-weight: bold !important;
+        padding: 15px !important;
+        bottom: 20px !important;
+        right: 20px !important;
     }
-
-    .whatsapp-float:hover {
-        background-color: #128c7e !important;
-        transform: scale(1.05) !important;
-    }
-
     .whatsapp-float i {
-        font-size: 24px !important;
-        margin-right: 10px !important;
+        margin-right: 0 !important;
     }
-
-    @media (max-width: 768px) {
-        .whatsapp-float span { display: none !important; }
-        .whatsapp-float { padding: 15px !important; bottom: 20px !important; right: 20px !important; }
-        .whatsapp-float i { margin-right: 0 !important; }
-    }
+}
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
     <a href="index.html" target="_top" class="navbar-brand ms-4 ms-lg-0">
@@ -85,6 +97,7 @@
     </div>
 
 </nav>
+
 
 
 
