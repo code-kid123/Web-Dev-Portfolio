@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Testimonial Iframe</title>
+    <link href="img/favicon.icon" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Fix to ensure the navigation dots (images) look correct */
+        .testimonial-carousel .owl-dot img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 10px;
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+        .testimonial-carousel .owl-dot.active img {
+            opacity: 1;
+            border: 2px solid #007bff; /* Adjust color to your theme */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid py-5 bg-secondary">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>Testimonial</h5>
+                        <h1 class="text-white">Our Clients Say</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-item text-center" data-dot="<img src='img/testimonial-1.jpg'>">
+                    <p class="fs-5 text-white">"Professional service and great results."</p>
+                    <h5 class="text-uppercase text-white">Joanne Irwin</h5>
+                    <span class="text-primary">Trader</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img src='img/testimonial-2.jpg'>">
+                    <p class="fs-5 text-white">"Marshal modelling agency gave me the opportunity of a lifetime."</p>
+                    <h5 class="text-uppercase text-white">Lana Anderson</h5>
+                    <span class="text-primary">Analyst</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img src='img/testimonial-3.jpg'>">
+                    <p class="fs-5 text-white">"Highly recommended for consistency."</p>
+                    <h5 class="text-uppercase text-white">Pamela Torney</h5>
+                    <span class="text-primary">Manager</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".testimonial-carousel").owlCarousel({
+                items: 1,
+                autoplay: true,
+                smartSpeed: 1000,
+                dots: true,
+                dotsData: true, // THIS IS THE KEY SETTING
+                loop: true,
+                nav: false
+            });
+        });
+    </script>
+</body>
+</html>
