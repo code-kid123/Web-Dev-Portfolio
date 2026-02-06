@@ -25,18 +25,19 @@
 <style>
 .whatsapp-float {
     position: fixed;
-    bottom: 30px; /* Lift it higher so it doesn't hide behind mobile nav bars */
+    bottom: 20px;
     right: 20px;
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    padding: 12px 24px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
-    z-index: 999999 !important; /* Force it to the absolute front */
-    display: flex !important; /* Ensure it stays visible */
+    padding: 15px; /* Larger area for fingers */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 999999 !important; /* This forces it above the navbar and everything else */
+    display: flex !important; /* This forces it to stay visible on mobile */
     align-items: center;
-    text-decoration: none;
+    justify-content: center;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -75,3 +76,4 @@
     </div>
 
 </nav>
+
