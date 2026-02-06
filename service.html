@@ -47,7 +47,7 @@
 
     <!-- Header Start -->
     <div class="container-fluid p-0">
-        <iframe src="header.html" style="width:100%; border:none; height:100px;" scrolling="no"></iframe>
+       <div id="header"></div>
         <div class="page-header pb-5">
             <div class="container text-center py-5">
                 <h1 class="display-4 text-uppercase mb-3 animated slideInDown">Services</h1>
@@ -185,6 +185,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
 </body>
 
 </html>
