@@ -23,20 +23,32 @@
     <link href="css/style.css" rel="stylesheet">
    
 <style>
+<style>
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #FFF;
+    bottom: 80px !important; /* Higher up to avoid mobile browser bars */
+    right: 20px !important;
+    background-color: #25d366 !important;
+    color: #FFF !important;
     border-radius: 50px;
     text-align: center;
-    padding: 15px; /* Larger area for fingers */
+    padding: 15px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 999999 !important; /* This forces it above the navbar and everything else */
-    display: flex !important; /* This forces it to stay visible on mobile */
+    z-index: 999999 !important; /* Above everything */
+    display: flex !important; /* Ensures visibility */
     align-items: center;
     justify-content: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-decoration: none;
+}
+
+/* This ensures the icon inside is the right size */
+.whatsapp-float i {
+    font-size: 24px;
+}
+</style>
+}
 }
 }
 
@@ -76,5 +88,6 @@
     </div>
 
 </nav>
+
 
 
